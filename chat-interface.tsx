@@ -18,7 +18,7 @@ export default function ChatInterface() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      content: "Hello! I'm the ByeLaws Assistant for Godrej 24. How can I help you today?",
+      content: "Hello! I'm the ByeLaws Assistant. How can I help you today?",
       sender: "assistant",
       timestamp: new Date(),
     },
@@ -91,8 +91,7 @@ export default function ChatInterface() {
       <div className="flex h-[700px] w-[90vw] max-w-[900px] min-w-[320px] flex-col rounded-3xl border shadow-sm overflow-hidden">
           {/* Header */}
           <header className="border-b px-6 py-4 text-center">
-            <h1 className="text-2xl font-bold text-primary">Godrej 24</h1>
-            <p className="text-lg p-1 text-muted-foreground">ByeLaws Assistant</p>
+            <h1 className="text-2xl font-bold text-primary">ByeLaws Assistant</h1>
           </header>
 
           {/* Chat area */}
@@ -103,7 +102,7 @@ export default function ChatInterface() {
                   <div className="flex max-w-[80%] gap-3 items-center">
                     {message.sender === "assistant" && (
                       <Avatar className="h-10 w-10 border-2 border-white rounded-full">
-                        <AvatarFallback className="bg-primary text-primary-foreground">G24</AvatarFallback>
+                        <AvatarFallback className="bg-primary text-primary-foreground">Bot</AvatarFallback>
                       </Avatar>
                     )}
                     <div
@@ -132,7 +131,7 @@ export default function ChatInterface() {
                 <div className="flex justify-start">
                   <div className="flex max-w-[80%] gap-3 items-center">
                     <Avatar className="h-10 w-10 border-2 border-white rounded-full">
-                      <AvatarFallback className="bg-primary text-primary-foreground">G24</AvatarFallback>
+                      <AvatarFallback className="bg-primary text-primary-foreground">Bot</AvatarFallback>
                     </Avatar>
                     <div className="rounded-lg px-4 py-2 border-2 border-white bg-muted">Typing...</div>
                   </div>
