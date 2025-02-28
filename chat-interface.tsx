@@ -13,6 +13,7 @@ interface Message {
 }
 
 export default function ChatInterface() {
+  const BACKEND_URL = import.meta.env.REACT_APP_BACKEND_URL
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -48,7 +49,7 @@ export default function ChatInterface() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/ask", {
+      const response = await fetch(`${BACKEND_URL}/ask`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
