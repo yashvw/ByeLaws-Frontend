@@ -13,7 +13,7 @@ interface Message {
 }
 
 export default function ChatInterface() {
-  const BACKEND_URL = import.meta.env.REACT_APP_BACKEND_URL
+  const BACKEND_URL = (import.meta as any).env.VITE_BACKEND_URL;
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     {
